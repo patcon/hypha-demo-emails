@@ -4,5 +4,5 @@
 
 ```
 pipenv install
-pipenv run python parse-email-config.py
+pipenv run python parse-email-config.py email-aliases.yml
 ```

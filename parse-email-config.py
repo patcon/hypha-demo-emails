@@ -1,6 +1,10 @@
+import sys
 import yaml
 
-CONFIG_FILE = "email-aliases.yml"
+def pop_default(l, index, default):
+    return l[index] if index < len(l) else default
+
+CONFIG_FILE = pop_default(sys.argv, 1, 'email-aliases.yml')
 
 # TODO: GET list of aliases
 
