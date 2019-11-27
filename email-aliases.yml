@@ -1,0 +1,73 @@
+aliases:
+  # External Aliases: Public
+  - in: finance@hypha.coop
+    out: group.finance-wg@hypha.local
+  - in: hello@hypha.coop
+    out: group.all@hypha.local
+  - in: infra@hypha.coop
+    out: group.infra-ops-wg@hypha.local
+  - in: members@hypha.coop
+    out: group.all@hypha.local
+  - in: members@cryptography.dog
+    out: members@hypha.coop
+
+  # Internal aliases: Groups
+  - in: group.all@hypha.local
+    out:
+      - user.garrying@hypha.local
+      - user.patcon@hypha.local
+      - user.ASoTNetworks@hypha.local
+      - user.dcwalk@hypha.local
+      - user.YurkoWasHere@hypha.local
+      - user.benhylau@hypha.local
+      - user.uditvira@hypha.local
+  - in: group.testing@hypha.local
+    out: user.testing@hypha.local
+
+  # Working Groups (mirroring GitHub teams)
+  - in: group.business-planning-wg@hypha.local
+    out:
+      - user.patcon@hypha.local
+      - user.benhylau@hypha.local
+      - user.dcwalk@hypha.local
+      - user.uditvira@hypha.local
+  - in: group.finance-wg@hypha.local
+    out:
+      - user.patcon@hypha.local
+      - user.YurkoWasHere@hypha.local
+      - user.benhylau@hypha.local
+  - in: group.governance-wg@hypha.local
+    out:
+      - user.patcon@hypha.local
+      - user.dcwalk@hypha.local
+      - user.uditvira@hypha.local
+  - in: group.infra-ops-wg@hypha.local
+    out:
+      - user.garrying@hypha.local
+      - user.patcon@hypha.local
+      - user.ASoTNetworks@hypha.local
+      - user.dcwalk@hypha.local
+      - user.YurkoWasHere@hypha.local
+
+  # Internal Aliases: Users
+  # Not managed in public config file.
+
+  # External aliases: Platforms
+  - in: platform.demo@hypha.coop
+    out: group.testing@hypha.local
+  - in:
+      - platform.github.bot@hypha.coop
+      - platform.heroku@hypha.coop
+      - platform.matrix.bot@hypha.coop
+    out: group.infra-ops-wg@hypha.local
+  - in: platform.quickbooks@hypha.coop
+    out: group.finance-wg@hypha.local
+  - in:
+      - platform.whereby@hypha.coop
+      - platform.digitalocean@hypha.coop
+      - platform.twitter@hypha.coop
+      - platform.instagram@hypha.coop
+      - platform.rebrandly@hypha.coop
+      - platform.namecheap@hypha.coop
+      - platform.hover@hypha.coop
+    out: group.all@hypha.local
