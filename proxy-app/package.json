@@ -1,0 +1,23 @@
+{
+  "name": "hypha-demo-emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patcon/hypha-demo-emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patcon/hypha-demo-emails/issues"
+  },
+  "homepage": "https://github.com/patcon/hypha-demo-emails#readme",
+  "dependencies": {
+    "argo": "^1.0.1"
+  }
+}
