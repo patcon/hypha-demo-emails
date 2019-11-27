@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 pyyaml = "*"
+simple-rest-client = "*"
+# simple-rest-client allows httpx v0.8.x, which is incompatible
+httpx = "~= 0.7.0"
 
 [requires]
 python_version = "3.6"
