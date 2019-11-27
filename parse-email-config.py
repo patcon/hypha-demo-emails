@@ -1,10 +1,26 @@
+import argparse
 import sys
 import yaml
 
-def pop_default(l, index, default):
-    return l[index] if index < len(l) else default
+parser = argparse.ArgumentParser(description='Configure email aliases from config file.')
+parser.add_argument('file',
+                    metavar='FILE',
+                    type=str,
+                    default='email-aliases.yml',
+                    help='a yml file specifying aliases',
+                    )
+parser.add_argument('--mock',
+                    help='Use a mock server url',
+                    action='store_true',
+                    )
+args = parser.parse_args()
 
-CONFIG_FILE = pop_default(sys.argv, 1, 'email-aliases.yml')
+CONFIG_FILE = args.file
+
+MOCK_SERVER = 'https://private-anon-e19b2e8aa7-mailcow.apiary-mock.com'
+PROD_SERVER = 'https://mailninja.aseriesoftubez.com'
+
+base_url = MOCK_SERVER if args.mock else PROD_SERVER
 
 # TODO: GET list of aliases
 
