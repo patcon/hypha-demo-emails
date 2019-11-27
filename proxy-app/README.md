@@ -6,6 +6,9 @@ allow a small subset of actions within the MailCow API.
 Specifically, this proxy currently only allows listing, editing, and
 creating of aliases.
 
+This project relies on `argo/argo`, for which [docs are
+available](https://github.com/argo/argo/).
+
 ## Usage
 
 ```
