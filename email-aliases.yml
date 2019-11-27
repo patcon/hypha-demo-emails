@@ -1,4 +1,8 @@
 aliases:
+  # Mock
+  - in: alias@domain.tld
+    out: destination-new@domain.tld
+
   # External Aliases: Public
   - in: finance@hypha.coop
     out: group.finance-wg@hypha.local
