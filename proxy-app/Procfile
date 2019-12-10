@@ -1,1 +1,1 @@
-web: cd proxy-app && npm start
+web: cd proxy-app && node server.js
