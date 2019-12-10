@@ -1,6 +1,6 @@
 var argo = require('argo');
 
-var BASE_URL = 'https://mailninja.aseriesoftubez.com';
+var BASE_URL = process.env.MAILCOW_BASE_URL || 'https://private-anon-1c4eb966d2-mailcow.apiary-mock.com';
 var MAILCOW_TOKEN_FULL = process.env.MAILCOW_TOKEN_FULL || 'xxxxxxxxxxxx';
 var HYPHA_TOKEN_RESTRICTED = process.env.HYPHA_TOKEN_RESTRICTED || '1234567890';
 
