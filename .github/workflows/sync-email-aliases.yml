@@ -7,6 +7,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      HYPHA_RESTRICTED_TOKEN: ${{ secrets.HYPHA_RESTRICTED_TOKEN }}
+
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
@@ -20,4 +23,4 @@ jobs:
         pipenv install
     - name: Sync email aliases
       run: |
-        pipenv run python parse-email-config.py email-aliases.yml --mock
+        pipenv run python sync-email-aliases.py email-aliases.yml --api-key $HYPHA_RESTRICTED_TOKEN
