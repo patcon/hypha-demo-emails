@@ -20,6 +20,6 @@ vim proxy-app/.env
 
 heroku create MY-APP-NAME
 heroku config:set $(cat proxy-app/.env)
-heroku buildpacks:set https://github.com/Pagedraw/heroku-buildpack-select-subdir
+heroku buildpacks:set https://github.com/negativetwelve/heroku-buildpack-subdir
 git push heroku master
 ```
