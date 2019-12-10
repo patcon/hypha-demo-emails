@@ -15,7 +15,11 @@ pipenv run python parse-email-config.py email-aliases.yml
 
 ```
 git clone https://github.com/patcon/hypha-demo-emails && cd hypha-demo-emails
-heroku create my-proxy-app
-heroku buildpacks:set https://github.com/negativetwelve/heroku-buildpack-subdir
+cp proxy-app/sample.env proxy-app/.env
+vim proxy-app/.env
+
+heroku create MY-APP-NAME
+heroku config:set $(cat proxy-app/.env)
+heroku buildpacks:set https://github.com/Pagedraw/heroku-buildpack-select-subdir
 git push heroku master
 ```
