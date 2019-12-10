@@ -18,7 +18,7 @@ parser.add_argument('--mock',
                     )
 parser.add_argument('--api-key',
                    help='api key to pass to the api or api proxy',
-                   action='store_const',
+                   action='store',
                    )
 args = parser.parse_args()
 
