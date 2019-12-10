@@ -16,12 +16,16 @@ parser.add_argument('--mock',
                     help='Use a mock server url',
                     action='store_true',
                     )
+parser.add_argument('--api-key',
+                   help='api key to pass to the api or api proxy',
+                   action='store_const',
+                   )
 args = parser.parse_args()
 
 CONFIG_FILE = args.file
 
 MOCK_SERVER = 'https://private-anon-e19b2e8aa7-mailcow.apiary-mock.com'
-PROD_SERVER = 'https://mailninja.aseriesoftubez.com'
+PROD_SERVER = 'https://hypha-mailcow-api-proxy-demo.herokuapp.com'
 
 base_url = MOCK_SERVER if args.mock else PROD_SERVER
 
@@ -30,9 +34,10 @@ class AliasResource(Resource):
         'list': {'method': 'GET', 'url': '/get/alias/{}'},
         'add': {'method': 'POST', 'url': '/add/alias'},
         'edit': {'method': 'POST', 'url': '/edit/alias'},
+        'delete': {'method': 'POST', 'url': '/delete/alias'},
     }
 
-default_headers = {'X-API-Key': '1234567890'}
+default_headers = {'X-API-Key': args.api_key}
 
 mailcow_api = API(
     api_root_url=base_url + '/api/v1',
