@@ -1,5 +1,10 @@
 # Demo: Email config syncer
 
+The purpose of this repo is to demo:
+
+- a script for syncing a configuration file describing our email aliases, [`sync-email-aliases.py`](/sync-email-aliases.py). This could be the full set, or a subset of the whole. It could also be public or private. The config file could be managed via pull request.
+- a small proxy app to restrict access to the mailserver API, so that only a subset of actions and domains can be modified via the API.
+
 ## Script
 
 ### Usage
