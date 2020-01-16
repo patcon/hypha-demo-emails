@@ -1,3 +1,5 @@
+# Note: something will be expanded to something@example.com (assuming example.com is default domain)
+
 aliases:
   # Mock
   - in: alias@domain.tld
@@ -10,10 +12,42 @@ aliases:
     out: group.all@hypha.local
   - in: infra@hypha.coop
     out: group.infra-ops-wg@hypha.local
+  - in: opportunities@hypha.coop
+    out: group.business-planning-wg@hypha.local
   - in: members@hypha.coop
     out: group.all@hypha.local
   - in: members@cryptography.dog
     out: members@hypha.coop
+    
+  # External aliases: Personal
+  - in: patcon
+  - out:
+    - smtp@hypha.local
+    - user.patcon@hypha.local
+  - in: dcwalk
+  - out:
+    - smtp@hypha.local
+    - user.dcwalk@hypha.local
+  - in: yurko
+  - out:
+    - smtp@hypha.local
+    - user.YurkoWasHere@hypha.local
+  - in: benhylau
+  - out:
+    - smtp@hypha.local
+    - user.benhylau@hypha.local
+  - in: udit
+  - out:
+    - smtp@hypha.local
+    - user.uditvira@hypha.local
+  - in: garry
+  - out:
+    - smtp@hypha.local
+    - user.garrying@hypha.local
+  - in: elon
+  - out:
+    - smtp@hypha.local
+    - user.ASoTNetworks@hypha.local
 
   # Internal aliases: Groups
   - in: group.all@hypha.local
